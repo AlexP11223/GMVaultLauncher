@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GMVaultLauncher", "GMVaultLauncher\GMVaultLauncher.csproj", "{910595AF-C4DC-4E5A-AFE0-5FFD34675E6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GMVaultLauncherTests", "GMVaultLauncherTests\GMVaultLauncherTests.csproj", "{E5B26575-8441-400E-A8BD-F1813B43CF79}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{910595AF-C4DC-4E5A-AFE0-5FFD34675E6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{910595AF-C4DC-4E5A-AFE0-5FFD34675E6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{910595AF-C4DC-4E5A-AFE0-5FFD34675E6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{910595AF-C4DC-4E5A-AFE0-5FFD34675E6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5B26575-8441-400E-A8BD-F1813B43CF79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5B26575-8441-400E-A8BD-F1813B43CF79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5B26575-8441-400E-A8BD-F1813B43CF79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5B26575-8441-400E-A8BD-F1813B43CF79}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

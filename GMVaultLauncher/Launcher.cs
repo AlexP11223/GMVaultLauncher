@@ -49,7 +49,7 @@ namespace GMVaultLauncher
                 StartInfo =
                 {
                     FileName = app,
-                    Arguments = String.Join(" ", args),
+                    Arguments = String.Join(" ", args.Select(arg => arg.Contains(' ') ? $"\"{arg}\"" : arg)),
 
                     UseShellExecute = false,
                     CreateNoWindow = true,

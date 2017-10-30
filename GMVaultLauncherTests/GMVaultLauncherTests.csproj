@@ -65,6 +65,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="args with spaces.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="packages.config" />
     <Content Include="stderr.bat">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

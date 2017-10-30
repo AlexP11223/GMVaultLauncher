@@ -44,6 +44,16 @@ namespace GMVaultLauncherTests
             Assert.Contains("stderr message", File.ReadAllText(launcher.LogFilePath));
         }
 
+        [Fact]
+        public void HandlesSpaces()
+        {
+            var launcher = new Launcher(LogDir, AppDir + "args with spaces.bat", new[] {"hello world", "-f"});
+            launcher.Launch();
+
+            Assert.Contains("arg1: hello world", File.ReadAllText(launcher.LogFilePath));
+            Assert.Contains("arg2: -f", File.ReadAllText(launcher.LogFilePath));
+        }
+
         public void Dispose()
         {
             if (Directory.Exists(LogDir))

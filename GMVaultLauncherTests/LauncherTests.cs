@@ -17,7 +17,7 @@ namespace GMVaultLauncherTests
         [Fact]
         public void WritesLog()
         {
-            var launcher = new Launcher(LogDir, "ping", new[] {"......."});
+            var launcher = new Launcher("ping", new[] {"......."}, LogDir);
             launcher.Launch();
 
             Assert.True(File.Exists(launcher.LogFilePath));
@@ -27,7 +27,7 @@ namespace GMVaultLauncherTests
         [Fact]
         public void WritesLogOnError()
         {
-            var launcher = new Launcher(LogDir, "not-exists", new[] {""});
+            var launcher = new Launcher("not-exists", new[] {""}, LogDir);
             launcher.Launch();
 
             Assert.True(File.Exists(launcher.LogFilePath));
@@ -37,7 +37,7 @@ namespace GMVaultLauncherTests
         [Fact]
         public void WritesStderrToLog()
         {
-            var launcher = new Launcher(LogDir, AppDir + "stderr.bat", new[] {""});
+            var launcher = new Launcher(AppDir + "stderr.bat", new[] {""}, LogDir);
             launcher.Launch();
 
             Assert.Contains("stdout message", File.ReadAllText(launcher.LogFilePath));
@@ -47,7 +47,7 @@ namespace GMVaultLauncherTests
         [Fact]
         public void HandlesSpaces()
         {
-            var launcher = new Launcher(LogDir, AppDir + "args with spaces.bat", new[] {"hello world", "-f"});
+            var launcher = new Launcher(AppDir + "args with spaces.bat", new[] {"hello world", "-f"}, LogDir);
             launcher.Launch();
 
             Assert.Contains("arg1: hello world", File.ReadAllText(launcher.LogFilePath));

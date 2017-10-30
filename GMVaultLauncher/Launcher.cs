@@ -19,7 +19,7 @@ namespace GMVaultLauncher
 
         private readonly string[] _cmdArgs;
 
-        public Launcher(string logDir, string appPath, string[] cmdArgs)
+        public Launcher(string appPath, string[] cmdArgs, string logDir)
         {
             _cmdArgs = cmdArgs;
             _appPath = appPath;

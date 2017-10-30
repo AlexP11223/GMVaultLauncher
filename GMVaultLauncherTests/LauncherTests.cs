@@ -34,6 +34,16 @@ namespace GMVaultLauncherTests
             Assert.Contains("Exception", File.ReadAllText(launcher.LogFilePath));
         }
 
+        [Fact]
+        public void WritesStderrToLog()
+        {
+            var launcher = new Launcher(LogDir, AppDir + "stderr.bat", new[] {""});
+            launcher.Launch();
+
+            Assert.Contains("stdout message", File.ReadAllText(launcher.LogFilePath));
+            Assert.Contains("stderr message", File.ReadAllText(launcher.LogFilePath));
+        }
+
         public void Dispose()
         {
             if (Directory.Exists(LogDir))
